@@ -15,19 +15,13 @@
   flex-direction: column;
   align-items: center;
   font-family: var(--main-font-family, "Inter-Variable"), sans-serif;
+  background-image: var(--background-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: "wght" var(--main-text-weight);
-}
-
-.bg-gradient {
-  position: fixed;
-  display: block;
-  object-fit: cover;
-  object-position: center;
-  background-image: var(--background-image);
-  inline-size: 100%;
-  block-size: 100%;
 }
 
 .header {
@@ -41,7 +35,7 @@
   margin-block-end: 103px;
   border: var(--border-style);
   text-transform: uppercase;
-  background-color: var( --additional-color,#fff);
+  background-color: var(--additional-color, #fff);
   inline-size: var(--content-unit-width);
   block-size: var(--header-block-size);
 }
@@ -69,7 +63,7 @@
   display: flex;
   flex-direction: column;
   border: var(--border-style);
-  background-color: var( --additional-color, #fff);
+  background-color: var(--additional-color, #fff);
   inline-size: var(--content-unit-width);
 }
 
@@ -103,10 +97,8 @@
   opacity: 0.5;
   font-family: var(--accent-font-family, "PressStart2P"), sans-serif;
   font-size: 14px;
-  text-shadow: 
-    -1px 0 var(--additional-color, #fff),
-    0 1px var(--additional-color, #fff),
-    1px 0 var(--additional-color, #fff),
+  text-shadow: -1px 0 var(--additional-color, #fff),
+    0 1px var(--additional-color, #fff), 1px 0 var(--additional-color, #fff),
     0 -1px var(--additional-color, #fff);
   mix-blend-mode: hard-light;
 }
@@ -143,6 +135,7 @@
   border: var(--border-style, 2px solid #000);
   overflow: hidden;
   background-color: var(--additional-color, #fff);
+  transition: box-shadow 0.3s ease;
   cursor: pointer;
 }
 
@@ -164,11 +157,12 @@
 }
 
 .card__icon-button {
+  justify-items: center;
   width: 39px;
   height: 38px;
   border: none;
   background-color: transparent;
-  justify-items: center;
+  transition: border 0.3s ease;
   cursor: pointer;
 }
 
@@ -176,38 +170,6 @@
   display: block;
   object-fit: cover;
   object-position: center;
-}
-
-.like-icon .sparks {
-  opacity: 0;
-}
-
-.card__icon-button .core {
-  transition: fill 0.3s;
-}
-
-.card__icon-button .main-body {
-  transition: fill 0.3s 0.05s;
-}
-
-.card__icon-button:hover .core {
-  fill: var(--heart-contour-color, #000);
-  transition: fill 0.3s 0.03s;
-}
-
-.card__icon-button:hover .main-body {
-  fill: var(--heart-contour-color, #000);
-  transition: fill 0.3s 0.05s;
-}
-
-.card__icon-button:active .core {
-  fill: var(--animation-fill-color, #ff0000);
-  transition: fill 0.3s;
-}
-
-.card__icon-button:active .main-body {
-  fill: var(--animation-fill-color, #ff0000);
-  transition: fill 0.3s ease 0.05s;
 }
 
 .card__like-button {
@@ -253,13 +215,10 @@
 
 .button:focus-visible {
   box-shadow: 2px 2px 0px 0px var(--accent-color, #000);
-  transition: box-shadow 0.3s ease;
 }
 
 .card__icon-button:focus-visible {
   border: var(--border-style);
-  transition: border 0.3s ease;
-
 }
 
 .popup {
