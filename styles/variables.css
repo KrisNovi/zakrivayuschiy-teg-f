@@ -15,7 +15,9 @@
   --header-title-font-size: clamp(3.063rem, 2.709rem + 1.504vw, 4.063rem);
   --header-subtitle-font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
   --content-unit-width: clamp(23.1875rem, 15.9692rem + 30.7981vw, 43.6875rem);
-  --header-block-size: clamp(20.1875rem, 19.2412rem + 4.0376vw, 22.875rem);
+  --header-block-size: clamp(20.375rem, 19.4947rem + 3.7559vw, 22.875rem);
+  --accent-color: #000;
+  --additional-color: #fff;
   --heart-contour-color: #000;
   --animation-fill-color: #FF0000;
 }
